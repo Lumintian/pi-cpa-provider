@@ -13,7 +13,7 @@
 需要 Pi 0.87.1+ 和可用的 CPA 实例。通过 npm 安装 Pi 扩展：
 
 ```bash
-pi install npm:pi-cpa-provider
+pi install npm:@lumintian/pi-cpa-provider
 ```
 
 安装后启动 Pi，运行 `/cpa-add` 添加实例并设置 URL、API key。也可以参照下文手写配置。

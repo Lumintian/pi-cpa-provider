@@ -13,7 +13,8 @@
     "url": "https://github.com/Lumintian/pi-cpa-provider/issues"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "type": "module",
   "packageManager": "pnpm@12.5.1",
