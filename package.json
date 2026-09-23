@@ -1,0 +1,39 @@
+{
+  "name": "pi-cpa-provider",
+  "version": "0.1.0",
+  "description": "Pi provider extension for one or more CLIProxyAPI (CPA) instances: per-instance model discovery, Codex Responses over WebSocket/SSE, and per-model Fast.",
+  "author": "Lumintian",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@12.5.1",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.5.1",
+      "onFail": "download"
+    }
+  },
+  "keywords": ["pi-package", "pi-extension", "cliproxyapi", "cpa", "codex"],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "pi": {
+    "extensions": ["./extensions/index.ts"]
+  },
+  "files": ["extensions/**/*.ts", "src/**/*.ts", "config.example.json", "README.md"],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "check": "pnpm run typecheck && pnpm test"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": ">=0.87.1"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "0.87.1",
+    "@earendil-works/pi-coding-agent": "0.87.1",
+    "@types/node": "24.10.1",
+    "typescript": "5.9.3"
+  }
+}

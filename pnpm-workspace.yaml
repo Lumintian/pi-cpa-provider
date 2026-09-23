@@ -1,0 +1,13 @@
+# Single-package workspace; also owns the dependency build policy.
+# The test suite and Pi loader do not require these install-time scripts.
+allowBuilds:
+  '@google/genai': false
+  esbuild: false
+  protobufjs: false
+minimumReleaseAgeExclude:
+  - '@earendil-works/chord@0.87.1'
+  - '@earendil-works/pi-agent-core@0.87.1'
+  - '@earendil-works/pi-ai@0.87.1'
+  - '@earendil-works/pi-coding-agent@0.87.1'
+  - '@earendil-works/pi-telemetry@0.87.1'
+  - '@earendil-works/pi-tui@0.87.1'

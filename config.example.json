@@ -1,0 +1,17 @@
+{
+  "instances": [
+    {
+      "id": "home",
+      "name": "家用 CPA",
+      "baseUrl": "http://127.0.0.1:8317",
+      "fastModels": { "gpt-5.5": true }
+    },
+    {
+      "id": "backup",
+      "name": "备用 CPA",
+      "baseUrl": "https://cpa.example.com",
+      "apiKeyEnv": "CPA_BACKUP_API_KEY",
+      "fastModels": {}
+    }
+  ]
+}
