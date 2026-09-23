@@ -4,6 +4,17 @@
   "description": "Pi provider extension for one or more CLIProxyAPI (CPA) instances: per-instance model discovery, Codex Responses over WebSocket/SSE, and per-model Fast.",
   "author": "Lumintian",
   "license": "MIT",
+  "homepage": "https://github.com/Lumintian/pi-cpa-provider#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lumintian/pi-cpa-provider.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lumintian/pi-cpa-provider/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "type": "module",
   "packageManager": "pnpm@12.5.1",
   "devEngines": {
@@ -24,7 +35,10 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
-    "check": "pnpm run typecheck && pnpm test"
+    "check": "pnpm run typecheck && pnpm test",
+    "preversion": "pnpm check",
+    "postversion": "git push --atomic origin HEAD refs/tags/v${npm_package_version}",
+    "prepublishOnly": "pnpm check"
   },
   "peerDependencies": {
     "@earendil-works/pi-ai": "*",
