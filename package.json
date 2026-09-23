@@ -1,5 +1,5 @@
 {
-  "name": "pi-cpa-provider",
+  "name": "@lumintian/pi-cpa-provider",
   "version": "1.0.0",
   "description": "Pi provider extension for one or more CLIProxyAPI (CPA) instances: per-instance model discovery, Codex Responses over WebSocket/SSE, and per-model Fast.",
   "author": "Lumintian",
